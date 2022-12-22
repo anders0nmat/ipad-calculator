@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import SwiftMathParser
 
 @main
 struct iPad_CalculatorApp: App {
+    @StateObject var engine = CalculatorEngine()
+    @StateObject var buttonSizes = ButtonModuleSize()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(engine)
+                .environmentObject(buttonSizes)
         }
     }
 }
