@@ -33,6 +33,17 @@ fileprivate struct HighlightArgumentView<Content: View>: View {
     }
 }
 
+let argumentColors: [Color] = [
+    .cyan,
+    .purple,
+    .green,
+    .blue,
+    .yellow,
+    .indigo,
+    .mint,
+    .brown,
+]
+
 let operationViewMap: [String : (TreeNode) -> AnyView] = [
     "#number": { node in
         AnyView(Text(String((node.node!.value as! NumberLiteral).value)))

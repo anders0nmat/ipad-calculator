@@ -9,9 +9,16 @@ import Foundation
 import SwiftUI
 
 struct ToolbarItems: View {
+    @State var settingsShown = false
     var body: some View {
-        Text("Hello")
-        Text("World")
+        Button {
+            settingsShown.toggle()
+        } label: {
+            Image(systemName: "gear")
+        }
+        .fullScreenCover(isPresented: $settingsShown) {
+            Settings(isOpen: $settingsShown)
+        }
     }
 }
 

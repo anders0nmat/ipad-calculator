@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9136A33A295B25FA002DD77A /* ButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A339295B25FA002DD77A /* ButtonConfiguration.swift */; };
+		9136A33C295B2965002DD77A /* ObjectAppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A33B295B2965002DD77A /* ObjectAppStorage.swift */; };
+		9136A33E295B2DCE002DD77A /* ModuleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A33D295B2DCE002DD77A /* ModuleSettings.swift */; };
+		9136A340295B4407002DD77A /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A33F295B4407002DD77A /* SettingsButton.swift */; };
+		9136A342295B4A32002DD77A /* SettingsButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A341295B4A32002DD77A /* SettingsButtonRow.swift */; };
+		9136A344295B4B73002DD77A /* SettingsButtonModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A343295B4B73002DD77A /* SettingsButtonModule.swift */; };
+		9138A996295C3B1D00F7922F /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138A995295C3B1D00F7922F /* Point.swift */; };
+		9138A998295C547300F7922F /* StripedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138A997295C547300F7922F /* StripedShape.swift */; };
+		9138A99A295C7C1F00F7922F /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138A999295C7C1F00F7922F /* ModuleList.swift */; };
+		9138A99C295C7CAC00F7922F /* ButtonSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138A99B295C7CAC00F7922F /* ButtonSettings.swift */; };
 		91CD8F5A29547EB100BBF949 /* iPad_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CD8F5929547EB100BBF949 /* iPad_CalculatorApp.swift */; };
 		91CD8F5E29547EB300BBF949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CD8F5D29547EB300BBF949 /* Assets.xcassets */; };
 		91CD8F6129547EB300BBF949 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CD8F6029547EB300BBF949 /* Preview Assets.xcassets */; };
@@ -40,6 +50,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9136A339295B25FA002DD77A /* ButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConfiguration.swift; sourceTree = "<group>"; };
+		9136A33B295B2965002DD77A /* ObjectAppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAppStorage.swift; sourceTree = "<group>"; };
+		9136A33D295B2DCE002DD77A /* ModuleSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleSettings.swift; sourceTree = "<group>"; };
+		9136A33F295B4407002DD77A /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		9136A341295B4A32002DD77A /* SettingsButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonRow.swift; sourceTree = "<group>"; };
+		9136A343295B4B73002DD77A /* SettingsButtonModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonModule.swift; sourceTree = "<group>"; };
+		9138A995295C3B1D00F7922F /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		9138A997295C547300F7922F /* StripedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripedShape.swift; sourceTree = "<group>"; };
+		9138A999295C7C1F00F7922F /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
+		9138A99B295C7CAC00F7922F /* ButtonSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSettings.swift; sourceTree = "<group>"; };
 		91CD8F5629547EB100BBF949 /* iPad Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPad Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CD8F5929547EB100BBF949 /* iPad_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPad_CalculatorApp.swift; sourceTree = "<group>"; };
 		91CD8F5D29547EB300BBF949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +104,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9138A994295C3AF200F7922F /* ButtonSettings */ = {
+			isa = PBXGroup;
+			children = (
+				9136A33D295B2DCE002DD77A /* ModuleSettings.swift */,
+				9138A999295C7C1F00F7922F /* ModuleList.swift */,
+				9138A99B295C7CAC00F7922F /* ButtonSettings.swift */,
+				9138A997295C547300F7922F /* StripedShape.swift */,
+				9136A33F295B4407002DD77A /* SettingsButton.swift */,
+				9138A995295C3B1D00F7922F /* Point.swift */,
+				9136A341295B4A32002DD77A /* SettingsButtonRow.swift */,
+				9136A343295B4B73002DD77A /* SettingsButtonModule.swift */,
+			);
+			path = ButtonSettings;
+			sourceTree = "<group>";
+		};
 		91CD8F4D29547EB100BBF949 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +182,7 @@
 				91CD8F712954878300BBF949 /* CalculatorEngine.swift */,
 				91CD8F762954893200BBF949 /* CalculatorEntry.swift */,
 				91CD8F78295489C300BBF949 /* TreeNode.swift */,
+				9136A33B295B2965002DD77A /* ObjectAppStorage.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -173,10 +209,10 @@
 			isa = PBXGroup;
 			children = (
 				91CD8F902954B17800BBF949 /* ButtonTab.swift */,
+				91CD8FA12954C31000BBF949 /* ButtonArea.swift */,
 				91CD8F9B2954BDDE00BBF949 /* CalculatorButton.swift */,
 				91CD8F9D2954C00E00BBF949 /* CalculatorButtonRow.swift */,
 				91CD8F9F2954C19600BBF949 /* CalculatorButtonModule.swift */,
-				91CD8FA12954C31000BBF949 /* ButtonArea.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -188,6 +224,7 @@
 				91CD8F952954B8A600BBF949 /* ButtonRowData.swift */,
 				91CD8F972954B8F800BBF949 /* ButtonModuleData.swift */,
 				91CD8F992954BC2300BBF949 /* ButtonSize.swift */,
+				9136A339295B25FA002DD77A /* ButtonConfiguration.swift */,
 			);
 			path = ButtonData;
 			sourceTree = "<group>";
@@ -196,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				91CD8FA62954CEC500BBF949 /* Settings.swift */,
+				9138A994295C3AF200F7922F /* ButtonSettings */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -280,9 +318,12 @@
 				91CD8FA42954C91600BBF949 /* Toolbar.swift in Sources */,
 				91CD8F6F295486E800BBF949 /* HistoryEntry.swift in Sources */,
 				91CD8F772954893200BBF949 /* CalculatorEntry.swift in Sources */,
+				9136A33A295B25FA002DD77A /* ButtonConfiguration.swift in Sources */,
 				91CD8F6A2954849300BBF949 /* MainView.swift in Sources */,
 				91CD8F7F2954955200BBF949 /* Disclosure.swift in Sources */,
+				9136A344295B4B73002DD77A /* SettingsButtonModule.swift in Sources */,
 				91CD8F942954B20900BBF949 /* ButtonData.swift in Sources */,
+				9136A340295B4407002DD77A /* SettingsButton.swift in Sources */,
 				91CD8F9A2954BC2300BBF949 /* ButtonSize.swift in Sources */,
 				91CD8F6C2954864D00BBF949 /* HistoryList.swift in Sources */,
 				91CD8F9E2954C00E00BBF949 /* CalculatorButtonRow.swift in Sources */,
@@ -290,15 +331,22 @@
 				91CD8F962954B8A600BBF949 /* ButtonRowData.swift in Sources */,
 				91CD8F7B29548BE200BBF949 /* TreeNodeView.swift in Sources */,
 				91CD8F5A29547EB100BBF949 /* iPad_CalculatorApp.swift in Sources */,
+				9138A99A295C7C1F00F7922F /* ModuleList.swift in Sources */,
 				91CD8FA22954C31000BBF949 /* ButtonArea.swift in Sources */,
 				91CD8F722954878300BBF949 /* CalculatorEngine.swift in Sources */,
+				9138A99C295C7CAC00F7922F /* ButtonSettings.swift in Sources */,
+				9138A998295C547300F7922F /* StripedShape.swift in Sources */,
 				91CD8F852954A11A00BBF949 /* HistoryLine.swift in Sources */,
 				91CD8F982954B8F800BBF949 /* ButtonModuleData.swift in Sources */,
 				91CD8F812954984100BBF949 /* Outline.swift in Sources */,
+				9136A33E295B2DCE002DD77A /* ModuleSettings.swift in Sources */,
 				91CD8F79295489C300BBF949 /* TreeNode.swift in Sources */,
+				9138A996295C3B1D00F7922F /* Point.swift in Sources */,
+				9136A342295B4A32002DD77A /* SettingsButtonRow.swift in Sources */,
 				91CD8F8A2954A7D100BBF949 /* ExponentTerm.swift in Sources */,
 				91CD8FA02954C19600BBF949 /* CalculatorButtonModule.swift in Sources */,
 				91CD8F8E2954AE6000BBF949 /* TestTabView.swift in Sources */,
+				9136A33C295B2965002DD77A /* ObjectAppStorage.swift in Sources */,
 				91CD8F912954B17800BBF949 /* ButtonTab.swift in Sources */,
 				91CD8FA72954CEC500BBF949 /* Settings.swift in Sources */,
 				91CD8F872954A32200BBF949 /* HistoryResult.swift in Sources */,
@@ -431,18 +479,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iPad Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = GCJBHVP82W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -459,18 +509,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iPad Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = GCJBHVP82W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CalculatorButton: View {
-    var button: ButtonData
+    @Binding var button: ButtonData
     
     @EnvironmentObject var sizes: ButtonModuleSize
     
-    var action: (String) -> Void
+    var action: ((String) -> Void)!
     
     var body: some View {
         if !button.isEmpty {
@@ -20,27 +20,27 @@ struct CalculatorButton: View {
                 Capsule()
                     .fill(button.color)
                     .overlay(alignment: .center) {
-                        if button.icon.isEmpty {
+                        if button.icon == .none {
                             Label(button.name, systemImage: "")
                                 .labelStyle(.titleOnly)
                                 .padding(4)
                         }
                         else {
-                            Label(button.name, systemImage: button.icon)
+                            Label(button.name, systemImage: button.icon.rawIcon)
                                 .labelStyle(.iconOnly)
                                 .padding(4)
                         }
                     }
                     .foregroundColor(.primary)
             }
-            .frame(width: sizes.totalWidth(button.span), height: sizes.buttonSize)
+            .frame(width: sizes.totalWidth(Int(button.span)), height: sizes.buttonSize)
             .font(.system(size: 32, weight: .regular, design: .rounded))
             .minimumScaleFactor(0.5)
             .lineLimit(1)
         }
         else {
             Color.clear
-                .frame(width: sizes.buttonSize, height: sizes.buttonSize)
+                .frame(width: sizes.totalWidth(Int(button.span)), height: sizes.buttonSize)
         }
     }
 }
@@ -48,7 +48,7 @@ struct CalculatorButton: View {
 struct CalculatorButton_Previews: PreviewProvider {
     @StateObject static var sizes = ButtonModuleSize()
     static var previews: some View {
-        CalculatorButton(button: .init(icon: "house", command: "", color: .action)) { print($0) }
+        CalculatorButton(button: .constant(.init(icon: .function, command: "", color: .action, span: 2))) { print($0) }
             .environmentObject(sizes)
     }
 }

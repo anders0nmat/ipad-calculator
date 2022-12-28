@@ -8,14 +8,6 @@
 import SwiftUI
 
 struct MainView: View {
-    // TODO: Store somewhere else
-    static let buttons: [ButtonModuleData] = [
-        .numberBlock,
-        .basicFunctions,
-        .numberBlock,
-        .basicFunctions
-    ]
-    
     @EnvironmentObject var engine: CalculatorEngine
     
     var body: some View {
@@ -34,7 +26,7 @@ struct MainView: View {
                     
                 }
                 Divider()
-                ButtonArea(modules: MainView.buttons, availableSpace: reader.size.width, action: engine.processCommand)
+                ButtonArea(availableSpace: reader.size.width, action: engine.processCommand)
                     .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             }
         }
@@ -44,9 +36,11 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     @StateObject static var engine = CalculatorEngine()
     @StateObject static var buttonSizes = ButtonModuleSize()
+    @StateObject static var configuration = ButtonConfiguration()
     static var previews: some View {
         MainView()
             .environmentObject(engine)
             .environmentObject(buttonSizes)
+            .environmentObject(configuration)
     }
 }

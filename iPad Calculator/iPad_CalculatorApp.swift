@@ -13,11 +13,14 @@ struct iPad_CalculatorApp: App {
     @StateObject var engine = CalculatorEngine()
     @StateObject var buttonSizes = ButtonModuleSize()
     
+    @StateObject var buttonConfiguration = ButtonConfiguration()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
                 .environmentObject(engine)
                 .environmentObject(buttonSizes)
+                .environmentObject(buttonConfiguration)
         }
     }
 }

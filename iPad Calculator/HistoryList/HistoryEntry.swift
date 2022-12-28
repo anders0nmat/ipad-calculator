@@ -20,6 +20,10 @@ struct HistoryEntry: View {
             Outline(entry.tree.children!.first!, children: \.children, content: HistoryLine.init)
                 .background(Color(uiColor: .secondarySystemBackground))
                 .cornerRadius(12)
+                .contextMenu {
+                    Text("Information")
+                    Text("kjansd")
+                }
             
             HistoryResult(entry.tree.result)
                 .padding(EdgeInsets(top: 12, leading: 14, bottom: 12, trailing: 20))

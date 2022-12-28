@@ -22,35 +22,35 @@ struct ButtonTab<Content: View, TabData>: View {
         }
     }
     
-    @Namespace var namespace
-    @State var selection: TabItem
+    @EnvironmentObject var configuration: ButtonConfiguration
     
-    init(_ tabs: [TabItem], content: @escaping (TabData) -> Content) {
-        self._tabs = State(initialValue: tabs)
+    @Namespace var namespace
+    @State var selectionIndex: Array.Index = 0
+    var starting: Array.Index = 0
+    
+    init(starting: Array.Index = 0, content: @escaping (Binding<ButtonModuleData>) -> Content) where TabData == Never {
         self.content = content
-        self._selection = State(initialValue: tabs.first!)
+        self.starting = starting
+        self._selectionIndex = State(wrappedValue: starting)
     }
     
-    @State var tabs: [TabItem]
-    
-    var content: (TabData) -> Content
+    var content: (Binding<ButtonModuleData>) -> Content
     
     var body: some View {
         VStack(spacing: 16) {
-            content(selection.data)
+            content($configuration.modules[selectionIndex])
             
             HStack {
-                ForEach(tabs) {tab in
+                ForEach(Array(configuration.modules[starting...].enumerated()), id: \.element.id) {index, tab in
                     Button {
-                        withAnimation(.easeInOut(duration: 0.2)) {selection = tab}
+                        withAnimation(.easeInOut(duration: 0.2)) {selectionIndex = index + starting}
                     } label: {
-                        Label("", systemImage: tab.icon)
+                        Label("", systemImage: configuration.modules[index + starting].icon.rawIcon)
                             .labelStyle(.iconOnly)
                             .padding(8)
                     }
-                    .background(Color.accentColor.opacity(selection.id == tab.id ? 0.2 : 0))
+                    .background(Color.accentColor.opacity(selectionIndex == index + starting ? 0.2 : 0))
                     .cornerRadius(8)
-                    .disabled(!tab.enabled)
                 }
             }
         }
@@ -59,13 +59,14 @@ struct ButtonTab<Content: View, TabData>: View {
 
 struct ButtonTab_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonTab([
+        /*ButtonTab([
             .init(4, icon: "house"),
             .init(2, icon: "gear"),
             .init(6, icon: "circle.fill", enabled: false),
         ]) {
             Text(String($0))
-        }
+        }*/
+        EmptyView()
     }
 }
 

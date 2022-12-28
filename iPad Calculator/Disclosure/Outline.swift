@@ -56,7 +56,7 @@ struct Outline_Previews: PreviewProvider {
             HStack {
                 Text(elem.name)
                 if let open = isOpen.wrappedValue {
-                    Button {
+                    Button() {
                         withAnimation {
                             isOpen.wrappedValue!.toggle()
                         }

@@ -12,10 +12,8 @@ import SwiftMathParser
 struct TreeNode: Identifiable {
     var id = UUID()
     
-    private static let colors: [Color] = [.red, .orange, .yellow]
-    
     static func argColor(_ index: Array.Index) -> Color {
-        return colors[index % colors.endIndex]
+        return argumentColors[index % argumentColors.endIndex]
     }
     
     weak var node: EvaluableTreeNode?

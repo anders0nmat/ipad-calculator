@@ -45,7 +45,7 @@ struct Disclosure_Previews: PreviewProvider {
         } label: { isOpen in
             HStack {
                 Text("Open me")
-                Button { withAnimation{isOpen.wrappedValue.toggle() } } label: {
+                Button { withAnimation{ isOpen.wrappedValue.toggle() } } label: {
                     Image(systemName: "chevron.right")
                 }
             }

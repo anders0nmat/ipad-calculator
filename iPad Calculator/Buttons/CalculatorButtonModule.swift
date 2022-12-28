@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CalculatorButtonModule: View {
-    var module: ButtonModuleData
+    @Binding var module: ButtonModuleData
     @EnvironmentObject var sizes: ButtonModuleSize
     var action: (String) -> Void
     
     var body: some View {
         VStack(spacing: 0) {
             VStack(spacing: sizes.buttonSpace) {
-                ForEach(module.rows, id: \.self) {
+                ForEach($module.rows, id: \.self) {
                     CalculatorButtonRow(row: $0, action: action)
                 }
             }
@@ -29,7 +29,7 @@ struct CalculatorButtonModule_Previews: PreviewProvider {
     
     @StateObject static var sizes = ButtonModuleSize()
     static var previews: some View {
-        CalculatorButtonModule(module: .numberBlock) { print($0) }
+        CalculatorButtonModule(module: .constant(.numberBlock)) { print($0) }
             .environmentObject(sizes)
     }
 }

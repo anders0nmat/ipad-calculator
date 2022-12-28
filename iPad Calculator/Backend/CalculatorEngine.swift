@@ -22,7 +22,11 @@ class CalculatorEngine: ObservableObject {
     
     func processCommand(_ command: String) {
         // TODO: Also handle Adding/Deleting Entries
-        if history.indices ~= currEntry {
+        if command == "=" {
+            newParser()
+            currEntry = history.endIndex - 1
+        }
+        else if history.indices ~= currEntry {
             do {
                 try history[currEntry].parser.parse(command)
             }
