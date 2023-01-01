@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		394F9C2129606BDE00AF2D56 /* IconSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F9C2029606BDE00AF2D56 /* IconSet.swift */; };
+		394F9C2329606CE900AF2D56 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F9C2229606CE900AF2D56 /* ColorSet.swift */; };
 		9136A33A295B25FA002DD77A /* ButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A339295B25FA002DD77A /* ButtonConfiguration.swift */; };
 		9136A33C295B2965002DD77A /* ObjectAppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A33B295B2965002DD77A /* ObjectAppStorage.swift */; };
 		9136A33E295B2DCE002DD77A /* ModuleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136A33D295B2DCE002DD77A /* ModuleSettings.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		394F9C2029606BDE00AF2D56 /* IconSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSet.swift; sourceTree = "<group>"; };
+		394F9C2229606CE900AF2D56 /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		9136A339295B25FA002DD77A /* ButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConfiguration.swift; sourceTree = "<group>"; };
 		9136A33B295B2965002DD77A /* ObjectAppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAppStorage.swift; sourceTree = "<group>"; };
 		9136A33D295B2DCE002DD77A /* ModuleSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleSettings.swift; sourceTree = "<group>"; };
@@ -104,6 +108,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		394F9C1E29606B7B00AF2D56 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				394F9C1F29606BA900AF2D56 /* Helper */,
+				91CD8F702954876700BBF949 /* Backend */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		394F9C1F29606BA900AF2D56 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9136A33B295B2965002DD77A /* ObjectAppStorage.swift */,
+				394F9C2029606BDE00AF2D56 /* IconSet.swift */,
+				394F9C2229606CE900AF2D56 /* ColorSet.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		9138A994295C3AF200F7922F /* ButtonSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +145,7 @@
 		91CD8F4D29547EB100BBF949 = {
 			isa = PBXGroup;
 			children = (
+				394F9C1E29606B7B00AF2D56 /* Data */,
 				91CD8F5829547EB100BBF949 /* iPad Calculator */,
 				91CD8F5729547EB100BBF949 /* Products */,
 			);
@@ -139,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				91CD8F7D2954954100BBF949 /* Disclosure */,
-				91CD8F702954876700BBF949 /* Backend */,
 				91CD8F5929547EB100BBF949 /* iPad_CalculatorApp.swift */,
 				91CD8F8F2954B16700BBF949 /* Buttons */,
 				91CD8F692954849300BBF949 /* MainView.swift */,
@@ -182,7 +205,6 @@
 				91CD8F712954878300BBF949 /* CalculatorEngine.swift */,
 				91CD8F762954893200BBF949 /* CalculatorEntry.swift */,
 				91CD8F78295489C300BBF949 /* TreeNode.swift */,
-				9136A33B295B2965002DD77A /* ObjectAppStorage.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -336,7 +358,9 @@
 				91CD8F722954878300BBF949 /* CalculatorEngine.swift in Sources */,
 				9138A99C295C7CAC00F7922F /* ButtonSettings.swift in Sources */,
 				9138A998295C547300F7922F /* StripedShape.swift in Sources */,
+				394F9C2329606CE900AF2D56 /* ColorSet.swift in Sources */,
 				91CD8F852954A11A00BBF949 /* HistoryLine.swift in Sources */,
+				394F9C2129606BDE00AF2D56 /* IconSet.swift in Sources */,
 				91CD8F982954B8F800BBF949 /* ButtonModuleData.swift in Sources */,
 				91CD8F812954984100BBF949 /* Outline.swift in Sources */,
 				9136A33E295B2DCE002DD77A /* ModuleSettings.swift in Sources */,
@@ -479,7 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iPad Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = GCJBHVP82W;
+				DEVELOPMENT_TEAM = RWPDJHLD7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -493,7 +517,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -509,7 +533,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iPad Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = GCJBHVP82W;
+				DEVELOPMENT_TEAM = RWPDJHLD7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -523,7 +547,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
