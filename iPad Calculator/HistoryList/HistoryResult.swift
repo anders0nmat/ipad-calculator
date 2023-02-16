@@ -42,6 +42,10 @@ struct HistoryResult: View {
             switch result {
             case .number(let value):
                 Text(String(value))
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 16)
+                    .contentShape(.interaction, RoundedRectangle(cornerRadius: 8))
+                    .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 8))
                     .contextMenu {
                         Button("Save as x") {
                             engine.addOrSetVariable(name: "x", value: value)
@@ -71,6 +75,10 @@ struct HistoryResult: View {
                     }
             case .function(let args):
                 Text("function(\(args.joined(separator: ", ")))")
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 16)
+                    .contentShape(.interaction, RoundedRectangle(cornerRadius: 8))
+                    .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 8))
                     .contextMenu {
                         Button("Save as f(\(args.joined(separator: ", ")))") {
                             engine.addOrSetFunction(name: "f", expression: rootNode)
