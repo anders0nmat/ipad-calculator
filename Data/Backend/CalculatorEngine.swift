@@ -14,6 +14,8 @@ class CalculatorEngine: ObservableObject {
     
     @Published var variables: [String: Double]
     @Published var variableOrder: [String]
+    @Published var functionOrder: [String]
+    
     
     var insertPoint: AnyObject? {
         history.indices ~= currEntry ? history[currEntry].parser.insertionPoint : nil
@@ -24,6 +26,7 @@ class CalculatorEngine: ObservableObject {
         self.currEntry = 0
         self.variables = [:]
         self.variableOrder = []
+        self.functionOrder = []
     }
     
     func processCommand(_ command: String) {
@@ -72,5 +75,24 @@ class CalculatorEngine: ObservableObject {
             self.variableOrder.append(name)
         }
         self.variables[name] = value
+    }
+    
+    func removeVariable(name: String) {
+        self.variables.removeValue(forKey: name)
+        self.variableOrder.removeAll(where: {$0 == name})
+    }
+    
+    func addOrSetFunction(name: String, expression: EvaluableTreeNode) {
+        if !self.functionOrder.contains(name) {
+            if let container = try? UserEvaluableContainer(internalName: name, expression: expression) {
+                addOperator(container)
+                
+                self.functionOrder.append(name)
+            }
+        }
+    }
+    
+    func removeFunction(name: String) {
+        self.functionOrder.removeAll(where: {$0 == name})
     }
 }

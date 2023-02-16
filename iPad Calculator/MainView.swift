@@ -10,18 +10,30 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var engine: CalculatorEngine
     
+    @State var showVariables: Bool = true
+    @Environment(\.horizontalSizeClass) var horzSize
+    
+    private var hasVariables: Bool {
+        !engine.variables.isEmpty || !engine.functionOrder.isEmpty
+    }
+    
     var body: some View {
         GeometryReader { reader in
             VStack(spacing: 0) {
                 HStack(spacing: 0) {
-                    // TODO: Variable-List View
+                    if hasVariables && showVariables && horzSize != .compact {
+                        VariableList()
+                            .frame(width: reader.size.width * 0.3)
+                        Divider()
+                    }
                     NavigationStack {
                         HistoryList()
                             .toolbar {
                                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-                                    ToolbarItems()
+                                    ToolbarItems(variablesShown: $showVariables.animation(.easeInOut(duration: 0.2)))
                                 }
                             }
+                            .background(Color(uiColor: .secondarySystemBackground))
                     }
                     
                 }

@@ -97,6 +97,10 @@ extension TreeNode {
             }
         }
         
+        if let variableName = (node.value as? VariableLiteral)?.variableName {
+            return highlighted { Text(variableName) }
+        }
+        
         if let handler = operationViewMap[node.value.internalName] {
             return highlighted { handler(self) }
         }

@@ -10,7 +10,14 @@ import SwiftUI
 
 struct ToolbarItems: View {
     @State var settingsShown = false
+    @Binding var variablesShown: Bool
     var body: some View {
+        Toggle(isOn: $variablesShown) {
+            Label("", systemImage: "number")
+                .labelStyle(.iconOnly)
+        }
+        
+        
         Button {
             settingsShown.toggle()
         } label: {
@@ -25,7 +32,7 @@ struct ToolbarItems: View {
 struct ToolbarItems_Previews: PreviewProvider {
     static var previews: some View {
         HStack(spacing: 8) {
-            ToolbarItems()
+            ToolbarItems(variablesShown: .constant(true))
         }
     }
 }

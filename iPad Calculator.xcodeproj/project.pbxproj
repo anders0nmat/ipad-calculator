@@ -19,6 +19,7 @@
 		9138A998295C547300F7922F /* StripedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138A997295C547300F7922F /* StripedShape.swift */; };
 		9138A99A295C7C1F00F7922F /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138A999295C7C1F00F7922F /* ModuleList.swift */; };
 		9138A99C295C7CAC00F7922F /* ButtonSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138A99B295C7CAC00F7922F /* ButtonSettings.swift */; };
+		91A45975299E60EB00124F46 /* VariableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A45974299E60EB00124F46 /* VariableList.swift */; };
 		91CD8F5A29547EB100BBF949 /* iPad_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CD8F5929547EB100BBF949 /* iPad_CalculatorApp.swift */; };
 		91CD8F5E29547EB300BBF949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CD8F5D29547EB300BBF949 /* Assets.xcassets */; };
 		91CD8F6129547EB300BBF949 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CD8F6029547EB300BBF949 /* Preview Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		9138A997295C547300F7922F /* StripedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripedShape.swift; sourceTree = "<group>"; };
 		9138A999295C7C1F00F7922F /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
 		9138A99B295C7CAC00F7922F /* ButtonSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSettings.swift; sourceTree = "<group>"; };
+		91A45974299E60EB00124F46 /* VariableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableList.swift; sourceTree = "<group>"; };
 		91CD8F5629547EB100BBF949 /* iPad Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPad Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CD8F5929547EB100BBF949 /* iPad_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPad_CalculatorApp.swift; sourceTree = "<group>"; };
 		91CD8F5D29547EB300BBF949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				91CD8F5929547EB100BBF949 /* iPad_CalculatorApp.swift */,
 				91CD8F8F2954B16700BBF949 /* Buttons */,
 				91CD8F692954849300BBF949 /* MainView.swift */,
+				91A45974299E60EB00124F46 /* VariableList.swift */,
 				91CD8FA52954CEB500BBF949 /* Settings */,
 				91CD8FA32954C91600BBF949 /* Toolbar.swift */,
 				91CD8F8D2954AE6000BBF949 /* TestTabView.swift */,
@@ -359,6 +362,7 @@
 				9138A99C295C7CAC00F7922F /* ButtonSettings.swift in Sources */,
 				9138A998295C547300F7922F /* StripedShape.swift in Sources */,
 				394F9C2329606CE900AF2D56 /* ColorSet.swift in Sources */,
+				91A45975299E60EB00124F46 /* VariableList.swift in Sources */,
 				91CD8F852954A11A00BBF949 /* HistoryLine.swift in Sources */,
 				394F9C2129606BDE00AF2D56 /* IconSet.swift in Sources */,
 				91CD8F982954B8F800BBF949 /* ButtonModuleData.swift in Sources */,
@@ -503,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iPad Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = RWPDJHLD7S;
+				DEVELOPMENT_TEAM = GCJBHVP82W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -517,7 +521,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -533,7 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iPad Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = RWPDJHLD7S;
+				DEVELOPMENT_TEAM = GCJBHVP82W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -547,7 +551,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iPad-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
